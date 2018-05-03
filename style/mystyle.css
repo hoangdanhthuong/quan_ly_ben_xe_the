@@ -1,0 +1,73 @@
+body{
+	font-family: "Time New Roman";
+	padding: 0;
+}
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 550px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+	background-color: #f1f1f1;
+	height: 100%;
+}
+
+/* On small screens, set height to 'auto' for the grid */
+@media screen and (max-width: 767px) {
+	.row.content {height: auto;} 
+}
+.jumbotron{
+	padding: 0px;
+	height: 100px;
+	line-height: 100px;
+	background-color: #337ab7;
+}
+.nav .nav-pills li a{
+	font-size: 14px;
+	font-weight: bold;
+	font-family: 'Time New Roman';
+	text-transform: uppercase; 
+
+}
+.title_header{
+	font-size: 16px;
+	text-transform: uppercase;
+	font-family: 'Time New Roman';
+	font-weight: bold;
+	padding: 5px;
+}
+#menu_html{
+	background-color: #9999ff;
+	color: black;
+}
+#menu_html li a{
+	color: black;
+}
+#menu_html li a:hover{
+	background-color: black;
+	color: white;
+}
+.container-fluid .nav{
+	font-size: 14px;
+	font-weight: bold;
+	font-family: 'Time New Roman';
+	text-transform: uppercase; 
+	color: white;
+}
+.container-fluid .row{
+	height: 100%;
+}
+#dang_xuat:hover{
+	text-decoration: none;
+	cursor: pointer;
+}
+#tieu_de_quan_ly{
+	padding-left: 20px;
+	margin-bottom:-10px;
+}
+#btn_them{
+	margin-bottom: 10px;
+}
+.form_sua{
+	margin-top: 50px;
+	height: 200px;
+}
