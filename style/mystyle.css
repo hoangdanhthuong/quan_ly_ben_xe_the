@@ -1,6 +1,7 @@
 body{
 	font-family: "Time New Roman";
 	padding: 0;
+	background-image: url('../image/background.jpg');
 }
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {height: 550px}

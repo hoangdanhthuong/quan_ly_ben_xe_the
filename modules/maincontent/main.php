@@ -13,6 +13,8 @@ if($tam =='phongban'){
 	include('modules/maincontent/right/chuc_vu/main.php');
 }elseif($tam =='chatluong'){
 	include('modules/maincontent/right/chat_luong/main.php');	
+}else{
+	include('modules/maincontent/right/trangchu.php');
 }
 
 ?>
