@@ -10,7 +10,9 @@ if($tam =='phongban'){
 }elseif($tam =='chucvu'){
 	include('modules/maincontent/right/chuc_vu/main.php');
 }elseif($tam =='luong'){
-	include('modules/maincontent/right/chuc_vu/main.php');
+	include('modules/maincontent/right/luong/main.php');
+}elseif($tam =='tuyen'){
+	include('modules/maincontent/right/tuyen/main.php');
 }elseif($tam =='chatluong'){
 	include('modules/maincontent/right/chat_luong/main.php');	
 }else{

@@ -11,14 +11,18 @@ $result = mysqli_query($conn, $sql);
 		<div class="row" id="btn_them">
 			<h2><a data-toggle="modal" data-target = "#them_chat_luong" class="btn btn-primary col-md-2">Thêm</a></h2>      
 		</div>
-		<table class="table table-hover table-bordered" id="table_chat_luong" class="display">
-			<thead >
+		<table class="table table-hover table-bordered text-center" id="table_chat_luong" class="display">
+			<thead class="text-center bg-primary">
 				<tr>
-					<th class="text-center col-md-1">Mã chất lượng</th>
-					<th class="text-center col-md-7">Chất lượng</th>
-					<th class="text-center col-md-2">Quản lý</th>
-					<th class="col-md-2"></th>
+					<th class="text-center col-md-1" rowspan="2" style="vertical-align: middle;">ID</th>
+					<th class="text-center col-md-7" rowspan="2" style="vertical-align: middle;">Chất lượng</th>
+					<th class="text-center col-md-2" colspan="2">Quản lý</th>
 				</tr>
+				<tr>
+					<th class="text-center col-md-2">Sửa</th>
+					<th class="text-center col-md-2">Xóa</th>
+				</tr>
+
 			</thead>
 			<tbody>
 				<?php
@@ -27,11 +31,11 @@ $result = mysqli_query($conn, $sql);
 					<tr id='row_<?php echo $row['id_chat_luong']?>'>
 						<td><?php echo $row['id_chat_luong']?></td>
 						<td><?php echo $row['chat_luong']?></td>
-						<td><a href="" data-toggle = 'modal' data-target = '#sua_chat_luong' id='btn_sua_chat_luong' >Sửa</a>
+						<td><a href="" data-toggle = 'modal' data-target = '#sua_chat_luong' id='btn_sua_chat_luong' ><i class="glyphicon glyphicon-edit"></i></a>
 						</td>
 
 						<td>
-							<a href="javascript:void(0)" id="btn_xoa_chat_luong_<?php echo $row['id_chat_luong']?>">Xóa</a>
+							<a href="javascript:void(0)" id="btn_xoa_chat_luong_<?php echo $row['id_chat_luong']?>"><i class="glyphicon glyphicon-trash"></i></a>
 						</td>
 					</tr>
 					<?php

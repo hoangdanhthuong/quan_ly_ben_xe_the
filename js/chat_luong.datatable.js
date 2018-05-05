@@ -51,25 +51,27 @@ $(document).on('click','#btn_tao_chat_luong', function(){
 //xoa chat luong
 
 $('#table_chat_luong').on('click','[id^="btn_xoa_chat_luong_"]', function(e){
-	e.preventDefault();
-	var id_chat_luong = $(this).attr('id').substring(19);
-	$.ajax({
-		url: 'modules/maincontent/right/chat_luong/xoa.php',
-		method: 'POST',
-		data: {id_quanlity: id_chat_luong},
-		cache: false,
-		beforeSend: function(){
+	if(confirm("Bạn có chắc chắn xóa?")){
+		e.preventDefault();
+		var id_chat_luong = $(this).attr('id').substring(19);
+		$.ajax({
+			url: 'modules/maincontent/right/chat_luong/xoa.php',
+			method: 'POST',
+			data: {id_quanlity: id_chat_luong},
+			cache: false,
+			beforeSend: function(){
 
-		},
-		success: function(data){
-			if(data){
-				alert(data);
-			}else{
-				$('#table_chat_luong').find('#row_'+id_chat_luong).remove();
+			},
+			success: function(data){
+				if(data){
+					alert(data);
+				}else{
+					$('#table_chat_luong').find('#row_'+id_chat_luong).remove();
+				}
+
 			}
-			
-		}
-	});
+		});
+	}
 });
 
 $(document).on('click','[id^="btn_sua_chat_luong_"]', function(e){

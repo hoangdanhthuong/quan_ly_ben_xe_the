@@ -1,5 +1,6 @@
 <?php
 include('../../../../admin/config.php');
+mysqli_set_charset($conn, 'UTF8');
 if(isset($_POST['quanlity'])){
 	$quanlity = $_POST['quanlity'];
 	if(isset($_POST['check'])){
